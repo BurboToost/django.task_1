@@ -1,0 +1,49 @@
+# =========================
+# Python cache files
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# =========================
+# Virtual environment
+# =========================
+venv/
+env/
+.venv/
+
+# =========================
+# Django stuff
+# =========================
+db.sqlite3
+*.log
+local_settings.py
+
+# media uploads (optional)
+media/
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+
+# =========================
+# VS Code / IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Migrations (optional - only if resetting DB)
+# =========================
+# Uncomment if you want to ignore migrations
+# */migrations/*.py
+# */migrations/*.pyc

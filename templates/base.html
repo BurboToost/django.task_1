@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Django Dashboard</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">MyDashboard</div>
+
+    <ul class="nav-links">
+      <li><a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+      <li><a href="/about/" class="{% if request.path == '/about/' %}active{% endif %}">About</a></li>
+      <li><a href="/dashboard/" class="{% if request.path == '/dashboard/' %}active{% endif %}">Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+</body>
+
+</html>
