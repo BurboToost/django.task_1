@@ -14,6 +14,7 @@
 
     <ul class="nav-links">
       <li><a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+      <li><a href="/todo/" class="{% if request.path == '/todo/' %}active{% endif %}">Todo</a></li>
       <li><a href="/about/" class="{% if request.path == '/about/' %}active{% endif %}">About</a></li>
       <li><a href="/dashboard/" class="{% if request.path == '/dashboard/' %}active{% endif %}">Dashboard</a></li>
     </ul>

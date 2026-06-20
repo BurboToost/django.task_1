@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card">
+  <h1>Todo</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    <input type="text" name="task" placeholder="New task" required />
+    <button type="submit">Add</button>
+  </form>
+
+  <ul>
+    {% for task in tasks %}
+      <li>
+        {{ task.title }}
+        <a href="{% url 'delete_task' task.id %}">Remove</a>
+      </li>
+    {% empty %}
+      <li>No tasks yet.</li>
+    {% endfor %}
+  </ul>
+
+</div>
+{% endblock %}
